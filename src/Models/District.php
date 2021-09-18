@@ -10,6 +10,11 @@ class District extends Model
         'meta' => 'array',
     ];
 
+    protected $appends = [
+        'province_name',
+        'city_name',
+    ];
+
     public $timestamps = false;
 
     public function city()

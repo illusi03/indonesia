@@ -12,6 +12,10 @@ class City extends Model
 
     public $timestamps = false;
 
+    protected $appends = [
+        'province_name'
+    ];
+
     public function province()
     {
         return $this->belongsTo('Laravolt\Indonesia\Models\Province', 'province_code', 'code');
